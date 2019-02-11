@@ -3,6 +3,9 @@
 #PBS -l nodes=2:ppn=2
 #PBS -l walltime=01:00:00
 #PBS -l mem=500mb
+### EMAIL NOTIFICATION OPTIONS ###
+#PBS -m abe                     # Send email on a:abort, b:begin, e:end
+#PBS -M hille321@umn.edu    # Your email address
 
 cd $PBS_O_WORKDIR/
 module load R/3.4.1
