@@ -40,6 +40,7 @@ lapply(mout, head)
 
 #Cluster method.
 ##Set up.
+cl <- makePSOCKcluster(ncores)
 clusterExport(cl, c("doit", "mle", "mlogl", "n", "nsim", "theta"))
 
 ##Run it.
