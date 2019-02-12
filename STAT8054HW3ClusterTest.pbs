@@ -7,6 +7,5 @@ PBS -l mem=500mb
 PBS -m abe                     # Send email on a:abort, b:begin, e:end
 PBS -M hille321@umn.edu    # Your email address
 
-cd Documents
 module load R/3.4.1
 R CMD BATCH --vanilla STAT8054HW3ClusterTest.R
