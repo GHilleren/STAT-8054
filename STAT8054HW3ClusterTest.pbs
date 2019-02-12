@@ -1,12 +1,12 @@
-#PBS -S /bin/bash
-#PBS -q batch
-#PBS -l nodes=2:ppn=2
-#PBS -l walltime=01:00:00
-#PBS -l mem=500mb
+PBS -S /bin/bash
+PBS -q batch
+PBS -l nodes=2:ppn=2
+PBS -l walltime=01:00:00
+PBS -l mem=500mb
 ### EMAIL NOTIFICATION OPTIONS ###
-#PBS -m abe                     # Send email on a:abort, b:begin, e:end
-#PBS -M hille321@umn.edu    # Your email address
+PBS -m abe                     # Send email on a:abort, b:begin, e:end
+PBS -M hille321@umn.edu    # Your email address
 
-cd $PBS_O_WORKDIR/
+cd Documents
 module load R/3.4.1
 R CMD BATCH --vanilla STAT8054HW3ClusterTest.R
