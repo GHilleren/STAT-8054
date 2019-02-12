@@ -1,6 +1,9 @@
 #Load library needed.
 library(parallel)
 ncores <- detectCores()
+n <- 10
+nsim <- 1e4
+theta <- 1
 
 #Unix Forking Method
 ##Define the function.
