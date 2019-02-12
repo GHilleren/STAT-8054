@@ -1,5 +1,6 @@
 #Load library needed.
 library(parallel)
+ncores <- detectCores()
 
 #Unix Forking Method
 ##Define the function.
