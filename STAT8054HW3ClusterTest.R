@@ -37,12 +37,6 @@ mout <- mclapply(rep(nsim / ncores, ncores), doit,
                  estimator = mle, mc.cores = ncores)
 lapply(mout, head)
 
-##Plot it.
-theta.hat <- unlist(mout)
-hist(theta.hat, probability = TRUE, breaks = 30)
-curve(dnorm(x, mean = theta, sd = theta / sqrt(3 * n)), add = TRUE)
-
-
 
 #Cluster method.
 ##Set up.
