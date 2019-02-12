@@ -1,3 +1,6 @@
+#Load library needed.
+library(parallel)
+
 #Unix Forking Method
 ##Define the function.
 doit <- function(nsim, estimator) {
