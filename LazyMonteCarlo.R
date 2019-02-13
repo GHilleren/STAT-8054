@@ -34,7 +34,7 @@ lapply(mout, head)
 #Cluster method.
 ##Set it up.
 cl <- makePSOCKcluster(ncores)
-clusterExport(cl, c("GregsNorm", "n", "nsim"))
+clusterExport(cl, c("GregsNorm", "nsim"))
 
 ##Run the parallelization with the cluster.
 pout <- parLapply(cl, rep(nsim / ncores, ncores), GregsNorm, mu = 5, sigma = .75)
