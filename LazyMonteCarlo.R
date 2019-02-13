@@ -12,7 +12,7 @@ set.seed(8054)
 ##Define the functions as given to us in class.
 
 GregsNorm <- function(nsim, mu, sigma) {
-  result <- double(nsim)
+  norm.vec <- double(nsim)
   for (i in 1:nsim) {
     norm.vec[i] <- mu + rnorm(1, 0, sigma)
   }
